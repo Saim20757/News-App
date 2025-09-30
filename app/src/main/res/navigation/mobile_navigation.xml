@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.newsapp.ui.Abcnews.HomeFragment"
+        android:name="com.example.newsapp.ui.News_24.HomeFragment"
         android:label="News 24"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.newsapp.ui.news24.GalleryFragment"
+        android:name="com.example.newsapp.ui.ABC_news.GalleryFragment"
         android:label="ABC"
         tools:layout="@layout/fragment_gallery" />
 

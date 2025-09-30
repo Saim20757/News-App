@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import com.example.newsapp.R;
+import com.example.newsapp.ui.ABC_news.Webviewcontroller;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +63,14 @@ public class FognewsFreagment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fognews_freagment, container, false);
+        View view =inflater.inflate(R.layout.fragment_fognews_freagment, container, false);
+        WebView webView = view.findViewById(R.id.webviewfoxnews);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
+
+        webView.setWebViewClient(new Webviewcontroller());
+        webView.loadUrl("https://www.foxnews.com/");
+
+        return view;
     }
 }

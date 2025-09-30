@@ -1,16 +1,19 @@
-package com.example.newsapp.ui.Abcnews;
+package com.example.newsapp.ui.News_24;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.newsapp.R;
 import com.example.newsapp.databinding.FragmentHomeBinding;
+import com.example.newsapp.ui.ABC_news.Webviewcontroller;
 
 public class HomeFragment extends Fragment {
 
@@ -23,9 +26,15 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        WebView webView = root.findViewById(R.id.webviewnews24);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        webView.setWebViewClient(new Webviewcontroller());
+        webView.loadUrl("https://www.news24bd.tv/");
+
+
+
         return root;
     }
 

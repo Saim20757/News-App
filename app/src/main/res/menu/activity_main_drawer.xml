@@ -5,33 +5,39 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/NEWS_24"
-            android:icon="@drawable/news24"
-            android:title="NEWS 24"
-            android:menuCategory="secondary"/>
-        <item
             android:id="@+id/ABC_NEWS"
             android:icon="@drawable/abcnews"
-            android:title="ABC NEWS" />
+            android:title="ABC NEWS"/>
+
+        <item
+            android:id="@+id/News_24"
+            android:icon="@drawable/news24"
+            android:title="NEWS 24"/>
+
         <item
             android:id="@+id/ZEE_NEWS"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="ZEE NEWS" />
+            android:title="ZEE NEWS"
+
+            />
         <item
             android:id="@+id/FOX_NEWS"
             android:icon="@drawable/foxnews"
-            android:title="FOX NEWS" />
+            android:title="FOX NEWS"
+            />
     </group>
     <item
         android:title="Upcoming">
 
-    <menu>
-        <item
-        android:id="@+id/CNBN_NEWS"
-        android:icon="@drawable/cnbnnews"
-        android:title="CNBN NEWS"/>
+        <menu>
+            <item
+                android:id="@+id/CNBN_NEWS"
+                android:icon="@drawable/cnbnnews"
+                android:title="CNBN NEWS"
+                />
 
-    </menu>
+        </menu>
     </item>
+
 </menu>
 
